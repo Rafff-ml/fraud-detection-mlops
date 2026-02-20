@@ -6,4 +6,4 @@ scikit-learn
 joblib
 streamlit
 requests
-altair
+altair==5.3.0
