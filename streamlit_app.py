@@ -31,7 +31,7 @@ if st.button("check Fraud"):
 
 
     response = requests.post(
-        "https://fraud-detection-mlops-i1ib.onrender.com/",
+        "https://fraud-detection-mlops-i1ib.onrender.com/predict",
         json=payload
     )
 
