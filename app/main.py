@@ -3,6 +3,10 @@ import joblib
 import numpy as np
 import pandas as pd
 import logging
+import os
+
+os.makedirs("logs", exist_ok=True)
+
 
 # Logging setup
 logging.basicConfig(
@@ -41,7 +45,9 @@ def predict(features: dict):
 
         risk = "HIGH" if prob > 0.7 else "MEDIUM" if prob > 0.4 else "LOW"
 
-        logging.info(f"Prediction made: {prob}")
+        logging.info(
+            f"INPUT={features} | FRAUD_PROB={prob} | RISK={risk}"
+        )
 
         return {
             "fraud_probability": float(prob),

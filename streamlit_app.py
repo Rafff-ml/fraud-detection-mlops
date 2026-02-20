@@ -31,7 +31,7 @@ if st.button("check Fraud"):
 
 
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "http://api:8000/predict",
         json=payload
     )
 
